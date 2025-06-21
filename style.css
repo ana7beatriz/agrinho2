@@ -185,7 +185,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   background-size: cover;
-  background-position: center;
+  background-position: 60%  40%;
   opacity: 0;
   animation: fadeIn 1.5s forwards;
 }
@@ -261,7 +261,7 @@ footer {
   left: -200px;
   height: 175px;
   z-index: 5;
-  animation: moverTrator 12s linear infinite;
+  animation: moverTrator 8s linear infinite;
   display: none;
 }
 
