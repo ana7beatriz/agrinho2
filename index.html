@@ -21,28 +21,25 @@
       <h2>Bem-vindo ao nosso festival!</h2>
       <nav>
         <ul>
-          <li><a href="#sobre-evento">Sobre o Evento</a></li>
-          <li><a href="#programacao">Programação</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="index1.html">Sobre o Evento</a></li>
+          <li><a href="index2.html">Programação</a></li>
+          <li><a href="index3.html">Galeria</a></li>
+          <li><a href="index4.html">Contato</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="sobre-evento" class="content-block">
+      <section class="card">
         <h3>🌻 Integração entre campo e cidade</h3>
         <p>Nosso festival celebra a sinergia entre a natureza e a inovação urbana. Levamos conhecimento tecnológico ao campo e trazemos os valores da terra à cidade.</p>
-        <a href="#top" class="back-top">Voltar ao topo ↑</a>
       </section>
-      <section id="programacao" class="content-block">
+      <section class="card">
         <h3>🚜 Tecnologias Sustentáveis</h3>
         <p>Drones na agricultura, sensores de umidade no solo e apps para gestão rural estão entre as inovações que unem os dois mundos.</p>
-        <a href="#top" class="back-top">Voltar ao topo ↑</a>
       </section>
-      <section id="galeria" class="content-block">
+      <section class="card">
         <h3>🍃 Conhecimento que se compartilha</h3>
         <p>O evento é também um espaço de escuta ativa: agricultores, cientistas, estudantes e empreendedores se encontram para trocar saberes e experiências.</p>
-        <a href="#top" class="back-top">Voltar ao topo ↑</a>
       </section>
     </main>
     <footer>
@@ -50,41 +47,34 @@
     </footer>
   </div>
 
-  <a id="top"></a>
-
-  <!-- Efeito de Chuva -->
   <div class="rain" id="rain"></div>
 
   <script>
     function enterSite() {
       const splash = document.getElementById('splash');
       const main = document.getElementById('mainContent');
-
-      // Inicia o fade out da chuva
       const rain = document.getElementById('rain');
+
+      splash.style.transition = 'opacity 1s ease';
+      splash.style.opacity = '0';
+
+      // Faz a chuva sumir aos poucos
       rain.style.transition = 'opacity 2s ease';
       rain.style.opacity = '0';
 
-      splash.style.opacity = '0';
-      splash.style.transition = 'opacity 1s ease';
-
       setTimeout(() => {
         splash.style.display = 'none';
+        rain.style.display = 'none';
         main.style.display = 'block';
         main.style.opacity = '0';
         setTimeout(() => {
           main.style.transition = 'opacity 1.5s ease';
           main.style.opacity = '1';
         }, 50);
-      }, 1000);
-
-      // Após a transição da chuva, esconder o container dela para não interferir
-      setTimeout(() => {
-        rain.style.display = 'none';
-      }, 2500);
+      }, 2000);
     }
 
-    // Script para criar gotas de chuva
+    // Criar gotas de chuva
     const rainContainer = document.getElementById('rain');
     for (let i = 0; i < 150; i++) {
       const drop = document.createElement('div');
@@ -97,3 +87,4 @@
   </script>
 </body>
 </html>
+
