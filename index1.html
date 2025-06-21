@@ -43,5 +43,25 @@
     <p>&copy; 2025 - Festejando a Conexão Campo-Cidade</p>
   </footer>
 
+  <!-- Trator -->
+  <img src="trator.png" alt="Trator andando" class="trator" id="trator" />
+
+  <!-- Script para exibir o trator ao fim da página -->
+  <script>
+    const trator = document.getElementById('trator');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const alturaTotal = document.documentElement.scrollHeight;
+      const alturaTela = window.innerHeight;
+
+      if (scrollTop + alturaTela >= alturaTotal - 20) {
+        trator.classList.add('visivel');
+      } else {
+        trator.classList.remove('visivel');
+      }
+    });
+  </script>
+
 </body>
 </html>

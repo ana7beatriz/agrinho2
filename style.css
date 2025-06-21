@@ -156,7 +156,6 @@ footer {
   }
 }
 
-/* Oculta o topo da chuva */
 .rain::before {
   content: '';
   position: fixed;
@@ -254,4 +253,27 @@ footer {
 
 .contact-form button:hover {
   background-color: #4d8a4d;
+}
+
+.trator {
+  position: fixed;
+  bottom: 0;
+  left: -200px;
+  height: 175px;
+  z-index: 5;
+  animation: moverTrator 12s linear infinite;
+  display: none;
+}
+
+.trator.visivel {
+  display: block;
+}
+
+@keyframes moverTrator {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100vw;
+  }
 }
